@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li><a routerLink="">Web Apps 23</a></li>
+
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="about">About</a></li>
+        <li><a routerLink="contact">Contact</a></li>
+
+        <ng-container *ngIf="!isConnected">
+            <li><a routerLink="login">Login</a></li>
+            <li><a routerLink="register">Register</a></li>
+        </ng-container>
+
+        <ng-container *ngIf="isConnected">
+            <li><a routerLink="logout">Logout</a></li>
+        </ng-container>
+    </ul>
+</nav>
